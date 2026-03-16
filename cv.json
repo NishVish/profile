@@ -1,1 +1,83 @@
 
+{
+  "name": "Nishant Vishwakarma",
+  "title": "Data Analyst / Software",
+  "summary": "Data Analyst and Software Developer with expertise in Python, SQL, data visualization, and automation. Experienced in designing and implementing data pipelines, web scraping systems, and custom tools that enhance workflow efficiency and solve complex business problems. Eager to continuously learn and adopt new technologies to drive innovation.",
+  "contact": {
+    "email": "nishwakarma3@gmail.com",
+    "phone": "7909075195",
+    "location": "Bengaluru, India",
+    "website": "nishvish.github.io/nishvish/"
+  },
+  "experience": [
+    {
+      "role": "Jr. Data Analyst",
+      "company": "Sphere Travelmedia and Exhibitions",
+      "duration": "04/2025 - Present",
+      "location": "Bengaluru",
+      "responsibilities": [
+        "Developed a QR-based registration system for badge printing and led a team of volunteers to register exhibitors and trade visitors efficiently.",
+        "Built a centralized Exhibitor Booking Portal providing teams with easy access to stall details, requirements, and company information."
+      ]
+    },
+    {
+      "role": "Event Executive",
+      "company": "Sphere Travelmedia and Exhibitions",
+      "duration": "12/2023 - 03/2025",
+      "location": "Bengaluru",
+      "responsibilities": [
+        "Built automated web scraping pipelines to collect and update lead data.",
+        "Implemented email automation for outreach campaigns.",
+        "Managed Hosted Buyer Program operations and communication workflows.",
+        "Migrated large datasets from Excel to SQL to improve reporting efficiency.",
+        "Developed a Lead Management System to track leads and improve conversions."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Simple Flask-Based File Server for Local Networks",
+      "description": "Built a custom FTP-like file transfer system for secure upload and download. Accessible via mobile and web interface."
+    },
+    {
+      "name": "Database Migrator App",
+      "description": "Developed a Python-based migration script (using SQL Connector) to transfer exhibition data from Excel to SQL databases, improving data accessibility and reporting performance."
+    },
+    {
+      "name": "Lead Management System",
+      "description": "Designed and maintained a system to manage leads from collection to follow-up, improving lead conversion rates and tracking."
+    }
+  ],
+  "education": [
+    {
+      "degree": "B-Tech in Electronics Engineering",
+      "institution": "Raajdhani Engineering College",
+      "duration": "2018 - 2022",
+      "location": "Bhuwaneshwar, Odisha"
+    },
+    {
+      "degree": "Diploma in Electrical Engineering",
+      "institution": "Koustuv School of Engineering",
+      "duration": "2015 - 2018",
+      "location": "Bhuwaneshwar, Odisha"
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "SQL", "PHP"],
+    "frameworks": ["CodeIgniter", "Flask"],
+    "libraries_tools": ["Pandas", "BeautifulSoup", "Selenium", "Power BI"],
+    "databases": ["MySQL", "MongoDB"],
+    "version_control": ["Git"],
+    "development_deployment": ["Docker (Containerization)"],
+    "other": ["MQL5"]
+  },
+  "certificates": [
+    {
+      "name": "IBM Data Analyst Certificate",
+      "duration": "03/2023 - 06/2023",
+      "skills": ["SQL", "Python", "Excel", "IBM Cognos"]
+    }
+  ],
+  "languages": ["English", "Hindi"],
+  "interests": ["Music", "Athletics", "Future Technology", "Quant"]
+}
