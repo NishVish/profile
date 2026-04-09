@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Review - Nishant Vishwakarma</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --text-dark: #0f172a;
+            --text-light: #475569;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border: 1px solid var(--border);
+            background: #ffffff;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-light);
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: #f0f7ff;
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        /* Main Content Layout */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .paper {
+            background: var(--card);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.4rem;
+            color: var(--text-dark);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Lists and Typography */
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #1e293b;
+        }
+
+        .note-box {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            border-radius: 4px;
+            font-style: italic;
+            color: #92400e;
+            margin: 30px 0;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        th {
+            background: #f1f5f9;
+            color: var(--text-dark);
+            padding: 12px;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+
+        td {
+            padding: 15px;
+            border: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            text-align: left;
+        }
+
+        /* Views */
+        #table-view {
+            display: none;
+        }
+
+        @media print {
+            .top-nav {
+                display: none;
+            }
+
+            .container {
+                margin: 0;
+                max-width: 100%;
+            }
+
+            .paper {
+                box-shadow: none;
+                border: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-nav">
+        <button class="nav-btn active" onclick="setView('doc')">
+            <i class="fas fa-file-alt"></i> Document Format
+        </button>
+        <button class="nav-btn" onclick="setView('table')">
+            <i class="fas fa-table"></i> Table Summary
+        </button>
+        <button class="nav-btn" onclick="window.print()" style="margin-left: 20px;">
+            <i class="fas fa-print"></i> Save as PDF
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="paper">
+            <header>
+                <h1>Annual Performance Review</h1>
+                <div class="subtitle">Nishant Vishwakarma</div>
+            </header>
+
+            <div id="doc-view">
+                <h2>1. Key Contributions & Achievements</h2>
+
+                <h3><i class="fas fa-microchip"></i> Technical Engineering & Digital Transformation</h3>
+                <ul>
+                    <li><strong>Full-Stack Development:</strong> Led the migration to <strong>Laravel</strong> and built
+                        a scalable centralized database architecture to improve system performance and maintainability.
+                    </li>
+                    <li><strong>Badge Printing Ecosystem:</strong> Designed and deployed an end-to-end printing system
+                        that eliminated data loss and ensured seamless real-time operations.</li>
+                    <li><strong>Process Automation:</strong> Developed an OCR-based card scanner to automate attendee
+                        data capture, significantly increasing verification speed and accuracy.</li>
+                    <li><strong>Modernization:</strong> Spearheaded UI/UX design improvements to modernize the user
+                        interface and system workflows.</li>
+                </ul>
+
+                <h3><i class="fas fa-project-diagram"></i> Strategic Event Operations</h3>
+                <ul>
+                    <li><strong>Event Coordination:</strong> Facilitated on-ground execution at exhibitions, including
+                        volunteer guidance and the optimization of badge management workflows.</li>
+                    <li><strong>Workflow Efficiency:</strong> Managed complex exhibitor pre-printing to ensure
+                        zero-bottleneck event-day performance.</li>
+                </ul>
+
+                <div class="note-box">
+                    <i class="fas fa-rocket"></i>
+                    <strong>Professional Growth & Role Evolution:</strong>
+                    I appreciate the opportunity to have expanded my technical scope into backend development,
+                    system architecture, and automation. These initiatives have allowed me to deliver high-level
+                    solutions that extend beyond the traditional Junior Data Analyst framework.
+                </div>
+
+                <h2>2. Self Assessment</h2>
+                <p><strong>Rating: Very Good</strong></p>
+                <p>Delivered reliable systems used in real-time environments, handled both technical development and
+                    operational execution, and contributed to major improvements in backend architecture, automation,
+                    and system scalability.</p>
+                <h2>3. Development Plan</h2>
+                <p>Looking forward, I aim to focus on the following strategic areas to ensure we are
+                    <strong>implementing ideal, robust solutions</strong> that perfectly align with our organizational
+                    workflows:
+                </p>
+                <ul>
+                    <li><strong>Mobile Ecosystem & Hardware Integration:</strong> Transitioning toward <strong>Android
+                            Development</strong> to implement native mobile solutions. This will provide a more robust
+                        interface for on-ground tasks, offering better stability and seamless hardware integration for
+                        exhibition workflows.</li>
+                    <li><strong>System Robustness & Scalability:</strong> Deepening expertise in <strong>scalable system
+                            architecture</strong> to move beyond basic functionality toward high-performance,
+                        enterprise-grade systems designed for maximum uptime.</li>
+                    <li><strong>Architecting Ideal Workflow Solutions:</strong> Advancing my knowledge of
+                        <strong>Laravel and API Security</strong> to design and implement end-to-end solutions that are
+                        purpose-built for our specific data and operational needs.
+                    </li>
+                    <li><strong>Performance Engineering:</strong> Enhancing system design skills to identify bottlenecks
+                        proactively, ensuring that every tool implemented is optimized for speed, reliability, and ease
+                        of use.</li>
+                    <li><strong>Modern Cloud Infrastructure:</strong> Learning <strong>cloud deployment and
+                            DevOps</strong> strategies to provide a stable, automated foundation for our large-scale
+                        applications.</li>
+                </ul>
+
+                <h2>4. Compensation Review Request</h2>
+                <p>Dear Neha,</p>
+                <p>I hope this message finds you well. I would like to request a reassessment of my current compensation
+                    in light of my contributions and responsibilities.</p>
+                <p>Since my transition from <strong>Event Executive</strong> to <strong>Junior Data Analyst</strong>, my
+                    role has naturally expanded to meet the organization's evolving technical needs. I have welcomed the
+                    opportunity to drive value through core system development, backend enhancements, and the creation
+                    of custom automation tools, while maintaining high-level operational execution at exhibitions.</p>
+                <p>Based on these contributions, I believe my current compensation may not fully reflect the
+                    responsibilities and value delivered. I would appreciate the opportunity for a compensation review
+                    to better align with my role and impact within the organization.</p>
+            </div>
+
+            <div id="table-view">
+                <h2>Role Progression Summary</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Stage</th>
+                            <th>Responsibilities & Achievements</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Event Executive</strong></td>
+                            <td>Initial Role</td>
+                            <td>Exhibition operations, volunteer coordination, badge printing workflows, Hosted Buyer
+                                Program logistics.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Junior Data Analyst</strong></td>
+                            <td>Current Role</td>
+                            <td>Badge printing system design, centralized database, Laravel migration, card scanner
+                                automation tool.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Developer-Level</strong></td>
+                            <td>Natural Evolution</td>
+                            <td>Backend architecture, database optimization, system performance improvements, and
+                                full-stack modernization.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Performance Metric Overview</h2>
+                <table>
+                    <tr>
+                        <th width="30%">Objective</th>
+                        <th>Achievement Highlights</th>
+                    </tr>
+                    <tr>
+                        <td><strong>System Reliability</strong></td>
+                        <td>Zero data loss during live exhibition badge printing operations.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tech Advancement</strong></td>
+                        <td>Successful migration to Laravel; improved maintenance & speed.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Innovation</strong></td>
+                        <td>Image-to-Text OCR tool for attendee data verification.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="footer">
+                <p>
+                    Thank you for your consideration. I am happy to discuss this further at your convenience.
+                </p>
+                <p>Best regards,<br>
+                    <strong>Nishant Vishwakarma</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setView(viewType) {
+            const doc = document.getElementById('doc-view');
+            const table = document.getElementById('table-view');
+            const btns = document.querySelectorAll('.nav-btn');
+
+            btns.forEach(b => b.classList.remove('active'));
+
+            if (viewType === 'doc') {
+                doc.style.display = 'block';
+                table.style.display = 'none';
+                btns[0].classList.add('active');
+            } else {
+                doc.style.display = 'none';
+                table.style.display = 'block';
+                btns[1].classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>
